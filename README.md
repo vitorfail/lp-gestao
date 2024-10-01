@@ -1,1 +1,1 @@
-# lp-gestao
+# lp
