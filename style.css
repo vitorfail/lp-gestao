@@ -85,12 +85,14 @@ body{
 }
 .perguntas_sinal{
     width: 30px;
+    font-weight: 200;
     height: 50px;
 }
 .perguntas_sinal::before{
     color: white;
     content: "+";
     width: 100%;
+    font-size: 40px;
     height: 100%;
     display: flex;
     position: relative;
@@ -698,6 +700,13 @@ font-size: 20px;
     border-radius: 20px;
     border: 1px solid var(--duvidas);
     cursor: pointer;
+}.colum .titulo_pergunta:focus-within~.resposta{
+    max-height: 200px;
+}
+.colum .titulo_pergunta button:focus-within>strong::before{
+    transition: all 0.3s;
+    transform: rotateZ(180deg);
+    content: "—";
 }
 .colum .titulo_pergunta{
     width: 100%;
@@ -706,7 +715,9 @@ font-size: 20px;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.titulo_pergunta p{
+.titulo_pergunta button{
+    background: none;
+    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
