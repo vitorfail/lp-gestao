@@ -1958,6 +1958,9 @@ font-size: 20px;
         top: -5%;
         left: 10%;
     }
+    .planos{
+        margin-top: 0px;
+    }
     .comentarios{
         width: 100%;
     }
@@ -1996,6 +1999,7 @@ font-size: 20px;
         justify-content: flex-start;
     }
     .caracteristicas{
+        padding-bottom:5rem;
     }
     .item{
         flex-direction: column;
@@ -2084,6 +2088,7 @@ font-size: 20px;
         text-align: justify;
     }
     .acoes{
+        margin-top: 50px;
         min-height: auto;
     }
     .cta_whats .form_enviar{
