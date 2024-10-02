@@ -22,9 +22,9 @@ const observer = new IntersectionObserver((entries) => {
         console.log(entry.isIntersecting)
         if (entry.isIntersecting) {
             // Adiciona o tema escuro
-            var logo = document.getElementById("logo")
-            logo.className = "error"
-            document.body.classList.add('thema_erro');
+            //var logo = document.getElementById("logo")
+            //logo.className = "error"
+            //document.body.classList.add('thema_erro');
 
         } else {
             var logo = document.getElementById("logo")
@@ -35,7 +35,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, {
     root: null, // Usa a viewport como root
-    rootMargin: '-400px 0px 0px 0px', // Ajuste a margem inferior conforme necessário
+    rootMargin: '200px 0px -1050px 0px ', // Ajuste a margem inferior conforme necessário
     threshold: 0.1
 });
 
@@ -212,25 +212,25 @@ function contadores(){
     if (numero !== null){
         const intervalo = setInterval(() => {
                 if (count < total) {
-                    count=count+15;
+                    count=count+1;
                     numero.textContent ='+'+ count;
                 } else {
                     clearInterval(intervalo);
                 }    
             
-        }, 400);
+        }, 80);
     }
     const numero_feedbacks = document.getElementById('numero2');
 
     if(numero_feedbacks !== null){
         const intervalo_feedbacks = setInterval(() => {
             if (count_feedbacks < total_feedbacks) {
-                count_feedbacks=count_feedbacks+9;
+                count_feedbacks=count_feedbacks+1;
                 numero_feedbacks.textContent ='+'+ count_feedbacks;
             } else {
                 clearInterval(intervalo_feedbacks);
             }    
-        }, 400);
+        }, 80);
     }
     const numero_satisfeitos = document.getElementById('numero3');
 
@@ -242,7 +242,7 @@ function contadores(){
             } else {
                 clearInterval(intervalo_satisfeitos);
             }    
-        }, 430);
+        }, 110);
     }
 }
 
