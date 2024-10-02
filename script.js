@@ -203,7 +203,7 @@ let count = 0;
 const total_feedbacks = 810; // Defina o número total que você deseja contar
 let count_feedbacks = 0;
 
-const total_satisfeitos = 62; // Defina o número total que você deseja contar
+const total_satisfeitos = 82; // Defina o número total que você deseja contar
 let count_satisfeitos = 0;
 
 function contadores(){
@@ -218,7 +218,7 @@ function contadores(){
                     clearInterval(intervalo);
                 }    
             
-        }, 80);
+        }, 30);
     }
     const numero_feedbacks = document.getElementById('numero2');
 
@@ -230,7 +230,7 @@ function contadores(){
             } else {
                 clearInterval(intervalo_feedbacks);
             }    
-        }, 80);
+        }, 40);
     }
     const numero_satisfeitos = document.getElementById('numero3');
 
@@ -242,7 +242,7 @@ function contadores(){
             } else {
                 clearInterval(intervalo_satisfeitos);
             }    
-        }, 110);
+        }, 300);
     }
 }
 
