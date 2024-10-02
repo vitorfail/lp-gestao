@@ -313,18 +313,44 @@ header .titulo .error{
 }
 .cta_garantias{
     text-decoration: none;
-    margin: 30px 0px;
+    margin: 3px 0px;
     font-size: 16px;
     cursor: pointer;
     font-weight: 400;
-    padding: 10px 16px;
+    align-items: center;
+    padding: 5px 16px;
+    justify-content: center;
     background: var(--cor-thema);
     border-radius: 6px;
     color: white;
     outline: none;
     border: none;
-    width: 200px;
+    display: flex;
+    width: 150px;
 }
+.cta_garantias.loja i{
+    color: var(--cor-thema);
+}
+@keyframes subir_bolsa {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+.cta_garantias.loja i{
+    animation: subir_bolsa infinite;
+    color: var(--cor-thema);
+}
+.cta_garantias.loja{
+    color: var(--cor-thema);
+}
+
 .cta_garantias i{
     animation: seta 1s infinite;
 }
@@ -351,7 +377,7 @@ header .titulo .error{
     color: var(--cor-destaque);
     font-size: 45px;
     line-height: 1.4;
-    display: ruby;
+    display: block;
     font-weight: 600;
 }
 .cta_inicial .descri p:nth-child(2){
@@ -647,7 +673,7 @@ font-size: 20px;
     color: white;
 }
 .solucoes .info{
-    width: 90%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -706,7 +732,7 @@ font-size: 20px;
 .colum .titulo_pergunta button:focus-within>strong::before{
     transition: all 0.3s;
     transform: rotateZ(180deg);
-    content: "—";
+    content: "-";
 }
 .colum .titulo_pergunta{
     width: 100%;
@@ -742,6 +768,9 @@ font-size: 20px;
     background: white;
     border-radius: 10px;
     display: flex;
+}
+.item span{
+    width: 70px;
 }
 .item:hover{
     border-bottom: 6px solid var(--cor-problema);
@@ -828,7 +857,6 @@ font-size: 20px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    min-height: 600px;
     width: 100%;
     display: flex;
 }
@@ -1164,7 +1192,6 @@ font-size: 20px;
 }
 
 .cta_whats .form_enviar .descri{
-    height: 70%;
     width: 45%;
 }
 
@@ -1195,6 +1222,9 @@ font-size: 20px;
     display: flex;
     align-items: center;
     color: white;
+}
+.cta_whats .bonus p{
+    font-size: 22px;
 }
 .cta_whats .bonus i{    
     margin-right: 10px;
@@ -1753,6 +1783,9 @@ font-size: 20px;
         width: 60vW;
         height: 700px;
     }
+    .solucoes .info{
+        width: 60%; 
+    }
     .planos .container{
         width: 60%; 
     }
@@ -1930,7 +1963,7 @@ font-size: 20px;
         padding: 0;
     }
     .slides .contadores .cont p[name="numero"]{
-        font-size: 20px;
+        font-size: 25px;
     }
     .slides .contadores .cont{
         padding-top: 2rem;
@@ -1941,6 +1974,16 @@ font-size: 20px;
     }
     .item{
         flex-direction: column;
+    }
+    .titulo_pergunta button{
+        font-size: 15px;
+        line-height: 1.2;
+    }
+    .colum .titulo_pergunta:nth-child(1){
+        padding: 1px 10px;
+    }
+    .resposta{
+        font-size: 15px;
     }
     .solucoes .titulo2{
         margin: 50px 0px;
@@ -1980,6 +2023,7 @@ font-size: 20px;
         padding: 1px 8px;
     }
     .cta_inicial .img{
+        margin-top: 50px;
         width: 80%;
         height: 20%;
     }
@@ -2023,7 +2067,7 @@ font-size: 20px;
         height: 100%;
     }
     .cta_whats{
-        min-height: 860px;
+        min-height: 1160px;
     }
     .cta_whats .form_enviar .descri {
         align-items: flex-start;
@@ -2041,11 +2085,23 @@ font-size: 20px;
     }
     .descri .titulo2{
     }
+    .item span{
+        width: 50px;
+    }
     .comentario .cabecalho .profile .informacoes p:nth-child(1){
         font-size: 17px;
     }
     .cta_whats .form_enviar .image img{
+        height: auto;
         width: 250px;
+    }
+    .cta_whats .bonus p{
+        font-size: 17px;
+    }
+    .slides .contadores .cont p:nth-child(2){
+        text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
     }
     .cta_whats .form_enviar::before{
         height: inherit;
@@ -2097,6 +2153,9 @@ font-size: 20px;
         top: -6%;
     }
     .solucoes .info .ask{
+        width: 90%;
+    }
+    .solucoes .info{
         width: 90%;
     }
 }

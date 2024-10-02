@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
     var loading= document.getElementById("loading")
     setTimeout(function() {
         loading.className = "loading show"
-        
+        window.scrollTo(0, 0);
     }, 800)
 });
 var index_comentario= 0
