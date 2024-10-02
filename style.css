@@ -132,6 +132,13 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.center_provas{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 header{
     z-index: 3;
     display: flex;
@@ -192,7 +199,6 @@ header .titulo .error{
 .cta_inicial{
     min-height: 800px;
     width: 100%;
-    min-height: 900px;
     flex-wrap: wrap;
     background: radial-gradient(circle at top left, var(--cor-banner1), var(--cor-banner2), var(--cor-banner3));
     display: flex;
@@ -203,7 +209,6 @@ header .titulo .error{
     padding-right: 50px;
     flex-direction: column;
     width: 50%;
-    height: 45%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -413,7 +418,7 @@ header .titulo .error{
     padding: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 80px;
     border-radius: 10px;
@@ -518,7 +523,7 @@ header .titulo .error{
     overflow-y: hidden;
     overflow-x: auto;
     user-select: none;
-    height: 100%;
+    height: 90%;
     min-width: auto;
     display: flex;
     align-items: center;
@@ -640,9 +645,13 @@ font-size: 20px;
     font-weight: 600;
 }
 .prova{
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
     width: 30%;
+    margin-right: 3rem;
     height: 100%;
-    padding: 3rem;
 }
 .prova .controles{
     justify-content: center;
@@ -750,7 +759,7 @@ font-size: 20px;
     width: 100%;
     text-align: justify;
     color: var(--duvidas);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;}
 .container{
     flex-wrap:wrap ;
@@ -897,24 +906,28 @@ font-size: 20px;
 .descri .opcoes{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 .descri .opcoes div{
+    min-height: 100px;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-.descri .opcoes div{
-    min-height: 200px;
-}
+
 .descri .opcoes div li{
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
     font-size: 20px;
-    width: 80%; 
-    margin: 10px 0px;
-    font-weight: 600;
-}
+    width: 95%;
+    /* margin: 10px 0px; */
+    font-weight: 600;}
 .descri .opcoes div p{
-    width: 80%;
+    font-size: 14px;
+    width: 95%;
     height: 80%;
 }
 .opcoes div li::marker{
@@ -938,12 +951,18 @@ font-size: 20px;
 .descri .opcoes div:nth-of-type(2) li::before{
     background: blue;
 }
-
+.descri .opcoes div:nth-of-type(3) li::before{
+    background: rgb(0, 177, 209);
+}
+.descri .opcoes div:nth-of-type(4) li::before{
+    background: rgb(184, 165, 0);
+}
 .cta_whats{
     min-height: 700px;
     width: 100%;
 }
 .prova_social{
+    min-height: 800px;
     display: flex;
     background: url("imagens/feedback.png") var(--cor-thema);
     background-position: center;
@@ -953,7 +972,7 @@ font-size: 20px;
     flex-wrap: wrap;
 }
 .caracteristicas{
-    padding-top: 200px;
+    padding-top: 100px;
 }.cta_whats, .curiosidades{
     padding-top: 100px;
 }
@@ -1016,7 +1035,7 @@ font-size: 20px;
     padding: 3%;
     border-radius: 20px;
     color: white;
-    width: 33%;
+    width: 30%;
     height: 130%;
     display: flex;
     position: relative;
@@ -1391,13 +1410,13 @@ font-size: 20px;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background: var(--cor-thema);
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
     cursor: pointer;
   }
@@ -1780,27 +1799,28 @@ font-size: 20px;
 }
 @media screen and (min-width: 1600px){
     #slider ul li{
-        width: 55vW;
+        width: 60vW;
         height: 700px;
     }
+    .center_provas{
+        width: 60%;
+    }
     .solucoes .info{
-        width: 55%; 
+        width: 60%; 
     }
     .planos .container{
-        width: 55%; 
+        width: 60%; 
     }
     .center{
-        width: 55%;
+        width: 60%;
     }
     .cta_inicial{
         padding-top: 50px;
-        min-height: 120vh;
     }
     .cta_inicial .dots{
         margin-left: -60vw;
     }
     .slides{
-        min-height: 150vh;
     }
     #slider{
         height: 80%;
@@ -1885,6 +1905,9 @@ font-size: 20px;
     .prova{
         width: 100%;
     }
+    .center_provas{
+        flex-direction: column;
+    }
     .center{
         flex-direction: column;
     }
@@ -1917,10 +1940,10 @@ font-size: 20px;
     #slider ul li{
         height: 200px;
     }
-    .planos .container .plano,#planos_premium{
+    .planos .container .plano, #planos_premium{
         margin-top: 5%;
         height: 80vh;
-        width: 100%;
+        width: 80%;
     }
     .planos .container {
         align-items: center;
@@ -1936,14 +1959,17 @@ font-size: 20px;
         left: 10%;
     }
     .comentarios{
-        width: 90%;
+        width: 100%;
     }
     .comentario{
         height: 90%;
-        width: 82vw;
+        width: 80vw;
     }
     .prova_social{
         min-height: auto;
+    }
+    .center_provas{
+        width: 90%;
     }
     .center{
         width: 90%;
@@ -2135,6 +2161,8 @@ font-size: 20px;
         height: 40px;
     }
     .prova{
+        margin: 0;
+        padding: 20px;
         height: auto;
     }
     .prova .titulo2{
