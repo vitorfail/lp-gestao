@@ -904,6 +904,7 @@ font-size: 20px;
     width: 50%;
 }
 .acoes .descri:nth-child(1){
+    margin-right: 20px;
     height: 100%;
     align-items: flex-end;
     flex-direction: column;
@@ -1889,6 +1890,9 @@ font-size: 20px;
     }
 }
 @media screen and (max-width:912px) {
+    .acoes .descri:nth-child(1){
+        margin-right: 0px;
+    }
     .cta_inicial{
         padding-top: 100px;
         min-height: auto;
@@ -1994,6 +1998,9 @@ font-size: 20px;
     }
 }
 @media screen and (max-width:600px) {
+    .acoes .descri:nth-child(1){
+        margin-right: 0px;
+    }
     p.control_prev,p.control_next{
         top: 50%;
     }
