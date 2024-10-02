@@ -89,7 +89,7 @@ body{
     height: 50px;
 }
 .perguntas_sinal::before{
-    color: white;
+    color: var(--cor-thema);
     content: "+";
     width: 100%;
     font-size: 40px;
@@ -706,14 +706,14 @@ font-size: 20px;
 .solucoes .info{
     width: 70%;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 6%;
 }
 .solucoes .info .colum{
-    padding: 20px;
+    padding: 0px 20px;
     width: 100%;
     text-align: center;
     min-width: auto;
@@ -721,6 +721,10 @@ font-size: 20px;
     justify-content: center;
 }
 .solucoes .info .ask{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    position: relative;
     position: relative;
     width: 70%;
 }
@@ -740,11 +744,9 @@ font-size: 20px;
     height: 30px;
     width: 30px;
     margin-right: 10px;
-    margin-top: 10px;
     z-index: 1;
     font-size: 15px;
     /* line-height: 18px; */
-    background: var(--duvidas);
     position: relative;
     border-radius: 7px;
     display: flex;
@@ -755,10 +757,12 @@ font-size: 20px;
 .colum .titulo_pergunta:nth-child(1){
     padding: 10px;
     border-radius: 20px;
+    background: white;
     border: 1px solid var(--duvidas);
     cursor: pointer;
 }.colum .titulo_pergunta:focus-within~.resposta{
     max-height: 200px;
+    margin: 20px 0px;
 }
 .colum .titulo_pergunta button:focus-within>strong::before{
     transition: all 0.3s;
@@ -770,9 +774,9 @@ font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
 .titulo_pergunta button{
+    color: var(--cor-thema);
     background: none;
     border: none;
     display: flex;
@@ -780,7 +784,6 @@ font-size: 20px;
     align-items: center;
     width: 100%;
     text-align: justify;
-    color: var(--duvidas);
     font-size: 20px;
     font-weight: 600;}
 .container{
@@ -944,6 +947,7 @@ font-size: 20px;
     flex-wrap: wrap;
 }
 .descri .opcoes div{
+    margin: 10px 0px;
     min-height: 100px;
     width: 48%;
     display: flex;
@@ -984,15 +988,7 @@ font-size: 20px;
     justify-content: center;
     align-items: center;
 }
-.descri .opcoes div:nth-of-type(2) li::before{
-    background: blue;
-}
-.descri .opcoes div:nth-of-type(3) li::before{
-    background: rgb(0, 177, 209);
-}
-.descri .opcoes div:nth-of-type(4) li::before{
-    background: rgb(184, 165, 0);
-}
+
 .cta_whats{
     min-height: 700px;
     width: 100%;
@@ -1015,6 +1011,15 @@ font-size: 20px;
 .slides{
     padding-top: 100px;
     position: relative;
+}
+.cta_inicial iframe{
+    aspect-ratio: 16 / 9;
+}
+.slides iframe{
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 20px 0px;
 }
 .slides .contadores{
     height: 200px;
@@ -2017,10 +2022,6 @@ font-size: 20px;
     .center{
         width: 90%;
     }
-    .item{
-        height: 300px;
-        margin: 0.7rem 0rem;
-    }
     .comentario .texto{
         font-size: 13px;
         text-align: justify;
@@ -2043,6 +2044,7 @@ font-size: 20px;
         padding-bottom:5rem;
     }
     .item{
+        margin: 0.7rem 0rem;
         flex-direction: column;
     }
     .titulo_pergunta button{
@@ -2097,6 +2099,7 @@ font-size: 20px;
         width: 80%;
         height: 20%;
     }.descri .opcoes{
+        align-items: center;
         flex-direction: column;
     }
     .solucoes{
@@ -2105,8 +2108,11 @@ font-size: 20px;
 
     .acoes .descri .titulo2{
         width: 100%;
-        text-align: left;
+        text-align: center;
         padding: 20px 0px;
+    }
+    .prova{
+        width: 90%;
     }
     .descri .titulo{
         margin-top: 30px;    
@@ -2128,11 +2134,21 @@ font-size: 20px;
         justify-content: center;
     }
     .descri .opcoes div{
+        align-items: center;
         width: 100%;
+    }
+    .descri .opcoes div p{
+        text-align: center;
     }
     .descri .opcoes div li{
         margin: 10px 0px;
-        justify-content: right;
+        justify-content: center;
+    }
+    .acoes .descri:nth-child(1){
+        align-items: center;
+    }
+    .descri .opcoes div li::before{
+        margin-right: 10px;
     }
     .acoes .descri .text{
         text-align: justify;
