@@ -1780,17 +1780,17 @@ font-size: 20px;
 }
 @media screen and (min-width: 1600px){
     #slider ul li{
-        width: 60vW;
+        width: 55vW;
         height: 700px;
     }
     .solucoes .info{
-        width: 60%; 
+        width: 55%; 
     }
     .planos .container{
-        width: 60%; 
+        width: 55%; 
     }
     .center{
-        width: 60%;
+        width: 55%;
     }
     .cta_inicial{
         padding-top: 50px;
