@@ -288,13 +288,14 @@ header .titulo .error{
     }
 }
 .garantias{
+    justify-content: space-between;
     width: 100%;
     display: flex;
 }
 .garantias li{
-    margin: 30px 0px;
+    margin: 30px 5px;
     display: flex;
-    width: 50%;
+    /* width: 50%; */
     font-weight: 600;
     font-size: 22px;
 }
@@ -349,7 +350,6 @@ header .titulo .error{
 
 }
 .cta_garantias.loja i{
-    animation: subir_bolsa infinite;
     color: var(--cor-thema);
 }
 .cta_garantias.loja{
@@ -363,24 +363,46 @@ header .titulo .error{
     transform: translateX(10px);
     color: white;
 }
+.loja:hover> i,.loja:hover> i::before{
+    transform: translateY(0px) translateX(0px);
+    transform: translateY(0px) translateX(0px);
+}
+.loja i{
+    animation: sobe_e_desce 1s infinite;
+
+}
+.loja i::before{
+    animation: sobe_e_desce infinite ease-in-out;
+    margin-left:10px;
+    color: var(--cor-thema);
+}
+@keyframes sobe_e_desce {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 .cta_garantias:hover{
     background: white;
     color: var(--cor-thema);
     outline: 2px solid var(--cor-thema);
 }
 .cta_garantias:hover> i::before{
-    transform: translateX(23px);
     color: var(--cor-thema);
+    transform: translateX(23px);
 }
 .cta_garantias:hover> i{
     animation: none;
 }
-.cta_garantias:hover> i{
-    transform: translateX(13px);
-}
+
 .cta_inicial .descri p:nth-child(1){
     color: var(--cor-destaque);
-    font-size: 45px;
+    font-size: 2.5vw;
     line-height: 1.4;
     display: block;
     font-weight: 600;
@@ -872,8 +894,18 @@ font-size: 20px;
 
 .acoes .descri{
     padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     text-align: left;
     width: 50%;
+}
+.acoes .descri:nth-child(1){
+    height: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    display: flex;
 }
 .descri .titulo{
     text-align: center;
@@ -886,11 +918,13 @@ font-size: 20px;
     color: var(--cor-thema);
     border-radius: 5px;
 }
+.acoes .descri .titulo2{
+    text-align: right;
+}
 .descri .titulo2{
-    text-align: left;
+    text-align: center;
     line-height: 1.2;
     padding: 20px 0px;
-    height: auto;
     width: 80%;
     font-weight: 600;
     color: rgb(0, 0, 0);
@@ -906,11 +940,12 @@ font-size: 20px;
 .descri .opcoes{
     width: 100%;
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 .descri .opcoes div{
     min-height: 100px;
-    width: 50%;
+    width: 48%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -918,14 +953,15 @@ font-size: 20px;
 }
 
 .descri .opcoes div li{
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
     display: flex;
     font-size: 20px;
     width: 95%;
     /* margin: 10px 0px; */
-    font-weight: 600;}
+    font-weight: 600;
+}
 .descri .opcoes div p{
+    text-align: right;
     font-size: 14px;
     width: 95%;
     height: 80%;
@@ -988,6 +1024,7 @@ font-size: 20px;
     justify-content: center;
 }
 .slides .contadores .cont{
+    margin: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1052,7 +1089,7 @@ font-size: 20px;
     width: 100%;
     height: 40px;
     background: red;
-    box-shadow: inset 0px 0px 12px rgba(255, 255, 255, 0.565), 0px 12px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 0px 12px rgb(44 44 44 / 56%), 0px 12px 32px rgba(0, 0, 0, 0.12);
 }
 .planos .container .plano .placa .etiqueta{
     width: 700px;
@@ -1798,6 +1835,9 @@ font-size: 20px;
 
 }
 @media screen and (min-width: 1600px){
+    .descri .opcoes div li{
+        font-size: 16px;
+    }
     #slider ul li{
         width: 60vW;
         height: 700px;
@@ -1832,15 +1872,13 @@ font-size: 20px;
 @media screen and (max-width:912px) {
     .cta_inicial{
         padding-top: 100px;
-        min-height: 90vh;
+        min-height: auto;
         flex-direction: column;
     }
     .cta_inicial .descri{
         width: 80%;
     }
-    .cta_inicial .descri p:nth-child(1){
-        font-size: 45px;
-    }
+
     .cta_inicial .img{
         padding-top: 10px;
         width: 80%;
@@ -1895,20 +1933,24 @@ font-size: 20px;
         margin: 20px 0px;
         font-size: 20px;
     }
+    .comentarios{}
     .container{
         justify-content: center;
     }
     .prova_social{
+        min-height: auto;
         flex-direction: column;
         flex-wrap: nowrap;
     }
     .prova{
-        width: 100%;
+        width: 70%;
+        margin-right: 0;
     }
     .center_provas{
         flex-direction: column;
     }
     .center{
+        width: 80%;
         flex-direction: column;
     }
     .acoes{
@@ -1924,10 +1966,9 @@ font-size: 20px;
         width: 100%;
     }
     .item{
-        width: 22rem;
+        width: 80%;
     }
     .planos .container .plano, #planos_premium{
-        height: 45vh;
         width: 40%;
     }.planos .container{
         width: 100%;
@@ -2055,6 +2096,8 @@ font-size: 20px;
         margin-top: 50px;
         width: 80%;
         height: 20%;
+    }.descri .opcoes{
+        flex-direction: column;
     }
     .solucoes{
         min-height: auto;
@@ -2083,6 +2126,13 @@ font-size: 20px;
         flex-direction: column;
         display: flex;
         justify-content: center;
+    }
+    .descri .opcoes div{
+        width: 100%;
+    }
+    .descri .opcoes div li{
+        margin: 10px 0px;
+        justify-content: right;
     }
     .acoes .descri .text{
         text-align: justify;
