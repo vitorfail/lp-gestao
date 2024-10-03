@@ -41,7 +41,7 @@ body{
     overflow-x: hidden;
 }
 .loading{
-    z-index: 10;
+    z-index: 100;
     background: white;
     position: fixed;
     width: 100%;
@@ -87,10 +87,10 @@ body{
     animation: pergunta 0.5s ease-in-out 3s forwards;
 }
 .perguntas_sinal{
+    padding-left: 9px;
     width: 30px;
     font-weight: 200;
-    height: 50px;
-}
+    height: 50px;}
 .perguntas_sinal::before{
     color: var(--cor-thema);
     content: "+";
@@ -524,6 +524,7 @@ header .titulo .error{
     padding-bottom: 100px;
 }
 .solucoes .titulo, .prova .titulo{
+    text-align: center;
     padding: 5px 30px;
     font-size: 18px;
     font-weight: 500;
@@ -1013,6 +1014,9 @@ font-size: 20px;
     flex-direction: row;
     background-repeat: no-repeat;
     flex-wrap: wrap;
+}
+.prova_social .setas{
+    display: none;
 }
 .caracteristicas{
     padding-top: 100px;
@@ -2045,6 +2049,20 @@ font-size: 20px;
     }
 }
 @media screen and (max-width:600px) {
+    .prova_social .setas{
+        display: flex;
+    }
+    .prova_social .setas i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--cor-thema);
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        border-radius: 50%;
+        background: white;
+    }
     .planos .container .plano .precos .preco_antigo{
         margin-bottom: 0px;
     }
@@ -2084,7 +2102,7 @@ font-size: 20px;
     }
     .planos .container .plano, #planos_premium{
         margin-top: 5%;
-        height: 80vh;
+        height: 65vh;
         width: 80%;
     }
     .planos .container {
@@ -2144,6 +2162,9 @@ font-size: 20px;
         flex-direction: column;
     }
     .titulo_pergunta button{
+        font-weight: 500;
+        /* padding: 0px 3px; */
+        text-align: center;
         font-size: 15px;
         line-height: 1.2;
     }
@@ -2189,6 +2210,7 @@ font-size: 20px;
         width: 80%;
     }
     .cta_inicial .descri p:nth-child(1){
+        margin-top: -60px;
         font-size: 30px;
         text-align: flex-start;
     }
@@ -2213,11 +2235,16 @@ font-size: 20px;
     .solucoes{
         min-height: auto;
     }
-
+    .cta_inicial .descri p:nth-child(2){
+        font-size: 20px;
+    }
     .acoes .descri .titulo2{
         width: 100%;
         text-align: center;
         padding: 20px 0px;
+    }
+    .prova .titulo2, .acoes .descri .titulo2,.descri .titulo2{
+        font-size: 30px;
     }
     .prova{
         width: 90%;
@@ -2360,7 +2387,10 @@ font-size: 20px;
         top: -6%;
     }
     .solucoes .info .ask{
-        width: 90%;
+        width: 100%;
+    }
+    .solucoes .info .colum{
+        padding: 0px 10px;
     }
     .solucoes .info{
         width: 90%;
