@@ -1193,9 +1193,18 @@ font-size: 20px;
 .planos .container .plano .lista .vantagens{
     color: white;
 }
+.planos .container .plano .lista #falta{
+    color: rgb(183, 0, 0);
+}
 .planos .container .plano .lista .vantagens::before{
     font-family: 'FontAwesome';
     content: '\f00c';
+    font-size: 16px;
+    padding-right: 10px;
+}
+.planos .container .plano .lista #falta::before{
+    font-family: 'FontAwesome';
+    content: '\58';
     font-size: 16px;
     padding-right: 10px;
 }
@@ -1575,6 +1584,9 @@ font-size: 20px;
 .rodape_final .comunicar{
     display: flex;
     align-items: center;
+}
+.rodape_final .comunicar .separador{
+    padding: 0px 10px;
 }
 .rodape_final .espaco_logo img{
     height: 50px;
@@ -2102,7 +2114,7 @@ font-size: 20px;
     }
     .planos .container .plano, #planos_premium{
         margin-top: 5%;
-        height: 65vh;
+        height: 74vh;
         width: 80%;
     }
     .planos .container {
@@ -2244,7 +2256,7 @@ font-size: 20px;
         padding: 20px 0px;
     }
     .prova .titulo2, .acoes .descri .titulo2,.descri .titulo2{
-        font-size: 27px;
+        font-size: 30px;
     }
     .prova{
         width: 90%;
