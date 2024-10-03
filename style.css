@@ -1034,7 +1034,7 @@ font-size: 20px;
     background: url("imagens/notebook.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .slides iframe{
