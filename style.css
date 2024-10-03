@@ -29,6 +29,9 @@
     font-style: normal;
     line-height: 33px;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     flex-direction: column;
     display: flex;
@@ -332,7 +335,6 @@ header .titulo .error{
     outline: none;
     border: none;
     display: flex;
-    width: 150px;
 }
 .cta_garantias.loja i{
     color: var(--cor-thema);
@@ -402,7 +404,7 @@ header .titulo .error{
 
 .cta_inicial .descri p:nth-child(1){
     color: var(--cor-destaque);
-    font-size: 2.5vw;
+    font-size: 2rem;
     line-height: 1.4;
     display: block;
     font-weight: 600;
@@ -437,7 +439,7 @@ header .titulo .error{
     background: var(--cor-thema);    
 }
 .cta_inicial .descri .button{
-    padding: 8px;
+    padding: 8px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -893,7 +895,10 @@ font-size: 20px;
     width: 100%;
     display: flex;
 }
-
+.descri .destaque{
+    position: relative;
+    font-weight: 600;
+}
 .acoes .descri{
     padding-left: 10px;
     display: flex;
@@ -1013,6 +1018,7 @@ font-size: 20px;
     position: relative;
 }
 .cta_inicial .encaminhar{
+    border-radius: 20px;
     display: flex;
     width: 100%;
     height: 100%;
@@ -1083,8 +1089,8 @@ font-size: 20px;
     padding: 3%;
     border-radius: 20px;
     color: white;
-    width: 30%;
-    height: 130%;
+    width: 26%;
+    height: 110%;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1233,7 +1239,7 @@ font-size: 20px;
     display: flex;
     content: "";
     background: rgb(120 120 120);
-    transform: translateY(6vh);
+    transform: translateY(2.1rem);
     width: 100%;
     height: 1px;
 }
@@ -1537,6 +1543,36 @@ font-size: 20px;
 }
 #money i{
     animation: money 0.8s ease-in-out calc(var(--i)*1s);
+}
+.rodape_final{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    background: #222b40;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.rodape_final .espaco_logo{
+    font-size: 30px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape_final .comunicar{
+    display: flex;
+    align-items: center;
+}
+.rodape_final .espaco_logo img{
+    height: 50px;
+    width: 50px;
+}
+.rodape_final .copy{
+    font-weight: 200;
+    text-align: center;
 }
 @keyframes money {
     0%{opacity: 1;
@@ -1858,7 +1894,8 @@ font-size: 20px;
         padding-left: 10px;
     }
     .planos .container .plano, #planos_premium{
-        width: 32%;
+        height: 110%;
+        width: 28%;
     }
     .descri .opcoes div li{
         font-size: 16px;
@@ -1900,7 +1937,6 @@ font-size: 20px;
     }
     .cta_inicial{
         padding-top: 100px;
-        min-height: auto;
         flex-direction: column;
     }
     .cta_inicial .descri{
@@ -2003,6 +2039,34 @@ font-size: 20px;
     }
 }
 @media screen and (max-width:600px) {
+    .planos .container .plano .precos .preco_antigo{
+        margin-bottom: 0px;
+    }
+    .planos .container .plano .primary{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .planos .plano .precos .preco1::before{
+        transform: translateY(1rem);
+    }
+    .planos .plano .precos .preco1{
+        font-size: 20px;
+    }
+    .planos .plano .precos .preco2{
+        font-size: 45px;
+    }
+    .planos .container .plano .lista p{
+        font-size: 14px;
+    }
+    .rodape_final .comunicar{
+        margin: 10px 0px;
+    }
+    .rodape_final .copy{
+        width: 80%;
+    }
+    .rodape_final .separador{
+        display: none;
+    }
     .acoes .descri:nth-child(1){
         margin-right: 0px;
     }
@@ -2087,6 +2151,18 @@ font-size: 20px;
         margin: 50px 0px;
         width: 90%;
     }
+    .rodape_final .espaco_logo{
+        font-size: 20px;
+    }
+    .rodape_final .espaco_logo img{
+        width: 30px;
+        height: 30px;
+    }
+    .rodape_final .comunicar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .titulo2{
         font-size: 23px;
     }
@@ -2117,7 +2193,7 @@ font-size: 20px;
         font-size: 12px;
     }
     .cta_inicial .descri .button #button{
-        font-size: 12px;
+        font-size: 15px;
         padding: 1px 8px;
     }
     .cta_inicial .img{
@@ -2206,6 +2282,7 @@ font-size: 20px;
         width: 100%;
     }
     .descri .titulo2{
+        width: 90%;
     }
     .item span{
         width: 50px;
