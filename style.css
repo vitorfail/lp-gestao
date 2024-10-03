@@ -2325,6 +2325,9 @@ font-size: 20px;
         display: flex;    }
     .cta_whats .form_enviar .titulo2{
     }
+    .cta_inicial .encaminhar{
+        background-size: contain;
+    }
     .cta_whats .form_enviar .image {
         height: 40%;
         width: 100%;
