@@ -43,13 +43,6 @@ const solucoes = document.getElementById('solucoes');
 // Inicia a observação da div alvo
 observer.observe(target);
 
-window.addEventListener('load', function() {
-    var loading= document.getElementById("loading")
-    setTimeout(function() {
-        loading.className = "loading show"
-        loading.style.display= "none"
-    }, 800)
-});
 var index_comentario= 0
 function passar(index){
     var comentarios = document.getElementById("container_comentarios")
