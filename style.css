@@ -429,7 +429,7 @@ header .titulo .error{
     width: 100%;
     height: 100%;
     display: flex;
-    opacity: 0.32;
+    opacity: 0.17;
     left: 5%;
     z-index: -1;
     top: 5%;
@@ -1030,7 +1030,7 @@ font-size: 20px;
     display: flex;
     width: 100%;
     height: 100%;
-    background: url("imagens/cta.png");
+    background: url("imagens/notebook.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
