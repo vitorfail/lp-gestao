@@ -1026,15 +1026,17 @@ font-size: 20px;
     position: relative;
 }
 .cta_inicial .encaminhar{
+    position: relative;
     border-radius: 20px;
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 135%;
     background: url("imagens/notebook.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
+
 .slides iframe{
     width: 70%;
     height: auto;
