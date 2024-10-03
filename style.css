@@ -555,6 +555,12 @@ header .titulo .error{
 .container_comentarios::-webkit-scrollbar {
     display: none; /* Esconde a barra de rolagem */
 }
+.container_comentarios{
+    scrollbar-width: none;
+}
+.container_comentarios {
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE e Edge */
+}
 .comentarios{
     width: 70%;
     display: flex;
@@ -1908,7 +1914,7 @@ font-size: 20px;
         width: 50%;
     }
     .solucoes .info{
-        width: 60%; 
+        width: 50%; 
     }
     .planos .container{
         width: 60%; 
