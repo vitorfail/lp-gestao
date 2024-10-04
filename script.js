@@ -1,3 +1,8 @@
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+});
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; // Posição do scroll
     if (scrollPosition>1){
@@ -95,12 +100,12 @@ function detectarScroll_sair(el) {
 }
 
 window.addEventListener("load",function() {
-    detectarScroll("solucao-letra")
-    detectarScroll("listra")
-    detectarScroll("cima");
     detectarScroll("esquerda");
     detectarScroll("direita");
+    detectarScroll("cima");
     detectarScroll("baixo");
+    detectarScroll("solucao-letra")
+    detectarScroll("listra")
     detectarScroll("money")
     detectarScroll("pergunta");
     detectarScroll("cifrao");
