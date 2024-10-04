@@ -40,6 +40,11 @@ body{
     height: 100%;
     overflow-x: hidden;
 }
+.solucoes, .prova_social, .cta_whats, .curiosidades .cta_whats, .curiosidades, .caracteristicas, .planos, .slides, .acoes{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
 .loading{
     z-index: 100;
     background: white;
@@ -198,7 +203,7 @@ header .titulo .error{
     }
 }
 .cta_inicial{
-    min-height: 800px;
+    min-height: 600px;
     width: 100%;
     flex-wrap: wrap;
     background: radial-gradient(circle at top left, var(--cor-banner1), var(--cor-banner2), var(--cor-banner3));
@@ -517,9 +522,7 @@ header .titulo .error{
     align-items: center;
     justify-content: center;
     display: flex;
-    padding-top: 100px;
     width: 100%;
-    padding-bottom: 100px;
 }
 .solucoes .titulo, .prova .titulo{
     text-align: center;
@@ -893,7 +896,6 @@ font-size: 20px;
     animation: baixo var(--delay) linear var(--i) forwards;
 }
 .acoes{
-    margin-top: 100px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -1016,13 +1018,10 @@ font-size: 20px;
 .prova_social .setas{
     display: none;
 }
-.caracteristicas{
-    padding-top: 100px;
-}.cta_whats, .curiosidades{
+.cta_whats, .curiosidades{
     padding-top: 100px;
 }
 .slides{
-    padding-top: 100px;
     position: relative;
 }
 .cta_inicial .encaminhar{
@@ -1074,17 +1073,16 @@ font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10rem;
 }
 .planos{
     position: relative;
-    margin-top: 100px;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 .planos .container{
     width: 100%;
-    height: 100%;
+    min-height: auto;
+    flex-shrink: 0;
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -1100,7 +1098,7 @@ font-size: 20px;
     border-radius: 20px;
     color: white;
     width: 26%;
-    height: 110%;
+    height: 60vh;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1919,7 +1917,6 @@ font-size: 20px;
         padding-left: 10px;
     }
     .planos .container .plano, #planos_premium{
-        height: 110%;
         width: 28%;
     }
     .descri .opcoes div li{
@@ -2043,9 +2040,7 @@ font-size: 20px;
         flex-direction: column;
     }
     .acoes{
-        margin-top: 100px;
         min-height: auto;
-        margin-bottom: 100px;
         }
     .acoes .people {
         width: 100%;
@@ -2205,6 +2200,9 @@ font-size: 20px;
         align-items: center;
         justify-content: center;
     }
+    .slides iframe{
+        width: 100%;
+    }
     .titulo2{
         font-size: 23px;
     }
@@ -2212,8 +2210,8 @@ font-size: 20px;
         width: 50%;
     }
     .cta_inicial{
-        padding-top: 0px;
-        min-height: 1000px;
+        padding-top: 60px;
+        min-height: 123%;
         justify-content: flex-start;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -2304,7 +2302,6 @@ font-size: 20px;
         text-align: justify;
     }
     .acoes{
-        margin-top: 50px;
         min-height: auto;
     }
     .cta_whats .form_enviar{
@@ -2406,6 +2403,9 @@ font-size: 20px;
     }
     .solucoes .info .ask{
         width: 100%;
+    }
+    .solucoes, .prova_social, .cta_whats, .curiosidades .cta_whats, .curiosidades, .caracteristicas, .planos, .slides, .acoes{
+        padding-top: 20px;
     }
     .solucoes .info .colum{
         padding: 0px 10px;
