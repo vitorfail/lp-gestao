@@ -81,38 +81,23 @@ function detectarScroll(el) {
 
     }
 }
-function detectarScroll_sair(el) {
-    var elements = document.querySelectorAll("."+el);
-    if (elements){
-        elements.forEach(function (element) {
-            console.log(e)
-            var position = element.getBoundingClientRect();
-            // Verifica se o elemento está visível no viewport
-            if (position.top < window.innerHeight && position.bottom >= 20) {
-                element.id = el; // Adiciona a classe
-            }
-            else{
-                element.id = ""
-            }
-        });
 
-    }
-}
 
 window.addEventListener("load",function() {
-    detectarScroll("esquerda");
-    detectarScroll("direita");
-    detectarScroll("cima");
-    detectarScroll("baixo");
-    detectarScroll("solucao-letra")
-    detectarScroll("listra")
-    detectarScroll("money")
-    detectarScroll("pergunta");
-    detectarScroll("cifrao");
-    detectarScroll("numero1");
-    detectarScroll("numero2");
-    detectarScroll("numero3");
-});
+    setTimeout(function() {
+        detectarScroll("esquerda");
+        detectarScroll("direita");
+        detectarScroll("cima");
+        detectarScroll("baixo");
+        detectarScroll("solucao-letra");
+        detectarScroll("listra");
+        detectarScroll("money");
+        detectarScroll("pergunta");
+        detectarScroll("cifrao");
+        detectarScroll("numero1");
+        detectarScroll("numero2");
+        detectarScroll("numero3");
+    }, 100);});
 window.addEventListener("scroll",function() {
     detectarScroll("listra")
     detectarScroll("solucao-letra")

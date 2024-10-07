@@ -410,13 +410,19 @@ header .titulo .error{
     font-size: 2rem;
     line-height: 1.4;
     display: block;
+    opacity: 0;
     font-weight: 600;
+    animation: baixo var(--delay) linear 0s forwards;
 }
 .cta_inicial .descri p:nth-child(2){
     color: var(--cor-base);
     font-size: 18px;
+    opacity: 0;
+    animation: baixo var(--delay) linear 0s forwards;
 }
 .cta_inicial .img{
+    opacity: 0;
+    animation: esquerda var(--delay) linear 0s forwards;
     height: 45%;
     width: 50%;
 }
@@ -449,6 +455,8 @@ header .titulo .error{
     width: 100%;
     height: 80px;
     border-radius: 10px;
+    opacity: 0;
+    animation: subir var(--delay) linear 0s forwards;
 }
 .cta_inicial .descri .button p{
     font-size: 15px;
@@ -1098,7 +1106,6 @@ font-size: 20px;
     border-radius: 20px;
     color: white;
     width: 26%;
-    height: 60vh;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1476,6 +1483,7 @@ font-size: 20px;
     background-size: cover;
   }
   .planos .rodape{
+    padding-top: 3px;
     line-height: 1;
     font-size: 10px;
     text-align: center;
@@ -1967,7 +1975,6 @@ font-size: 20px;
 
     .cta_inicial .img{
         padding-top: 10px;
-        width: 80%;
     }
     .planos .plano a, #planos_premium a{
         height: 50px;
