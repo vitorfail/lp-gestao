@@ -418,7 +418,7 @@ header .titulo .error{
     color: var(--cor-base);
     font-size: 18px;
     opacity: 0;
-    animation: baixo var(--delay) linear 0s forwards;
+    animation: baixo var(--delay) linear 0.9s forwards;
 }
 .cta_inicial .img{
     opacity: 0;
