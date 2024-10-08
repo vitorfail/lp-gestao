@@ -412,7 +412,7 @@ header .titulo .error{
     display: block;
     opacity: 0;
     font-weight: 600;
-    animation: baixo var(--delay) linear 0s forwards;
+    animation: baixo var(--delay) linear 0.9s forwards;
 }
 .cta_inicial .descri p:nth-child(2){
     color: var(--cor-base);
@@ -456,7 +456,7 @@ header .titulo .error{
     height: 80px;
     border-radius: 10px;
     opacity: 0;
-    animation: subir var(--delay) linear 0s forwards;
+    animation: subir var(--delay) linear 0.9s forwards;
 }
 .cta_inicial .descri .button p{
     font-size: 15px;
