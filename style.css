@@ -2154,8 +2154,8 @@ font-size: 20px;
     }
     .planos .container .plano .placa .etiqueta{
         position: relative;
-        top: -5%;
-        left: 10%;
+        top: -2%;
+        left: 5%;
     }
     .planos{
         margin-top: 0px;
