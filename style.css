@@ -533,6 +533,7 @@ header .titulo .error{
     width: 100%;
 }
 .solucoes .titulo, .prova .titulo{
+    line-height: 1;
     text-align: center;
     padding: 5px 30px;
     font-size: 18px;
@@ -2084,6 +2085,9 @@ font-size: 20px;
     }
 }
 @media screen and (max-width:600px) {
+    .prova .titulo2{
+        min-height:auto;
+    }
     .prova_social .setas{
         display: flex;
     }
@@ -2249,7 +2253,7 @@ font-size: 20px;
     }
     .cta_inicial .descri p:nth-child(1){
         margin-top: -60px;
-        font-size: 25px;
+        font-size: 150%;
         text-align: flex-start;
     }
     .cta_inicial .descri .button{
@@ -2282,7 +2286,7 @@ font-size: 20px;
         padding: 20px 0px;
     }
     .prova .titulo2, .acoes .descri .titulo2,.descri .titulo2{
-        font-size: 30px;
+        font-size: 150%;
     }
     .prova{
         width: 90%;
