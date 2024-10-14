@@ -44,7 +44,41 @@ body{
     padding-bottom: 50px;
     padding-top: 50px;
 }
-
+.negrito{
+    font-weight: 700;
+}
+.destaque-linha{
+    width: fit-content;
+    display: flex;
+    position: relative;
+    color: rgb(40, 185, 0);
+    font-weight: 600;
+}
+.destaque-linha::before{
+    top: 100%;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-size: cover;
+    background: url("imagens/linha.png");
+    clip-path: inset(0 100% 0 0);
+    clip-path: 30%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: initial;
+    animation: esconder 2s ease-in-out forwards;
+    display: flex;
+}
+@keyframes esconder {
+    from {
+        clip-path: inset(0 100%  0 0); /* Mostra o elemento completamente */
+    }
+    to {
+        clip-path: inset(0 0 0 0); /* Mostra o elemento completamente */
+    }
+}
 .loading{
     z-index: 100;
     background: white;
@@ -465,17 +499,33 @@ header .titulo .error{
     color: rgb(84, 84, 84);
 }
 .descri .button #button{
+    outline: 2px solid rgb(19, 125, 19);
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     font-size: 16px;
+    font-weight: 600;
+    width: 100%;
     cursor: pointer;
-    font-weight: 400;
     padding: 10px 16px;
-    background: var(--cor-thema);
-    border-radius: 6px;
+    background: linear-gradient(90deg, var(--cor-thema), var(--cor-thema), #98ff68, var(--cor-thema), var(--cor-thema));
+    background-size: 400%;
+    animation: changeGradientAnimation 18s ease-in-out infinite;
+    border-radius: 30px;
     color: white;
-    outline: none;
     border: none;
 }
+    @keyframes changeGradientAnimation {
+      0% {
+        background-position: 0%;
+      }
+      50% {
+        background-position: 400%;
+      }
+      100% {
+        background-position: 0%;
+      }
+    }
 .descri .button #button:hover{
     outline: 2px solid var(--cor-thema);
     background: transparent;
@@ -964,6 +1014,9 @@ font-size: 20px;
     text-align: right;
 }
 .descri .titulo2{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     line-height: 1.2;
     padding: 20px 0px;
@@ -1064,6 +1117,7 @@ font-size: 20px;
 }
 
 .slides iframe{
+    border-radius: 20px;
     width: 70%;
     height: auto;
     aspect-ratio: 16 / 9;
