@@ -246,10 +246,10 @@ function mover_esquerda(){
     }
 }
 // Auto-movimento
-/*let direction = 1; // 1 para direita, -1 para esquerda
-const speed = 60; // Pixels a mover
-const moveInterval = setInterval(() => {
-    const maxScrollLeft = comentario.scrollWidth - comentario.clientWidth; // Máximo scroll possível
+let direction = 1; // 1 para direita, -1 para esquerda
+const speed = 10; // Pixels a mover
+/*const moveInterval = setInterval(() => {
+const maxScrollLeft = comentario.scrollWidth - comentario.clientWidth; // Máximo scroll possível
 
     // Move a barra
     comentario.scrollLeft += direction * speed;
@@ -258,7 +258,7 @@ const moveInterval = setInterval(() => {
     if (comentario.scrollLeft >= maxScrollLeft || comentario.scrollLeft <= 0) {
         direction *= -1; // Inverte a direção
     }
-}, 2000); // Mover a cada 2 segundos
+}, 1000); // Mover a cada 2 segundos
 */
 // Eventos para mouse
 comentario.addEventListener('mousedown', startDragging);
