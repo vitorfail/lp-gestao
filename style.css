@@ -921,8 +921,8 @@ font-size: 20px;
     width: 70px;
 }
 .item img{
-    border-radius: 20px;
-    border:2px solid rgba(0, 0, 0, 0.448);
+    border-radius: 10px;
+    border:1px solid rgba(0, 0, 0, 0.448);
     width: 30%;
     height: 100%;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.099);
@@ -2309,6 +2309,28 @@ font-size: 20px;
     .item{
         margin: 0.7rem 0rem;
         flex-direction: column;
+    }
+    #solucoes .item{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    }
+    #solucoes .item .liric p:nth-of-type(1){
+        text-align: center;
+    }
+    #solucoes .item .liric{
+        align-items: center;
+    }
+    #solucoes .item .liric p{
+        text-align: center;
+    }
+    .item img{
+        width: 100%;
+        height: 170px;
+        margin-right: 0px;
     }
     .titulo_pergunta button{
         font-weight: 500;
