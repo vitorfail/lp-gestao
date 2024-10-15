@@ -47,14 +47,14 @@ body{
 .negrito{
     font-weight: 700;
 }
-.destaque-linha{
+.destaque_linha{
     width: fit-content;
     display: flex;
     position: relative;
     color: rgb(40, 185, 0);
     font-weight: 600;
 }
-.destaque-linha::before{
+#destaque_linha::before{
     top: 100%;
     content: "";
     position: absolute;
