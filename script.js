@@ -101,6 +101,7 @@ window.addEventListener("load",function() {
 window.addEventListener("scroll",function() {
     detectarScroll("listra")
     detectarScroll("solucao-letra")
+    detectarScroll("destaque_linha")
     detectarScroll("money")
     detectarScroll("cima");
     detectarScroll("esquerda");
