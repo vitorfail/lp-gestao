@@ -531,6 +531,31 @@ header .titulo .error{
     background: transparent;
     color: var(--cor-thema);
 }
+.descri .opcoes2 {
+    min-height: 170px;
+}
+.descri .opcoes2 li{
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+}
+
+.descri .opcoes2 li::before {
+    margin-bottom: 10px;
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    font-size: 16px;
+    color: white;
+    background: var(--cor-thema);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: 7px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
 .cta_inicial .close, .cta_inicial .dots,.cta_inicial .tringle {
     opacity: 1;
     position: absolute;
@@ -999,6 +1024,13 @@ font-size: 20px;
     flex-direction: column;
     display: flex;
 }
+.acoes .descri:nth-child(2){
+    margin-right: 20px;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+}
 .descri .titulo{
     text-align: center;
     width: 200px;
@@ -1010,8 +1042,11 @@ font-size: 20px;
     color: var(--cor-thema);
     border-radius: 5px;
 }
-.acoes .descri .titulo2{
+.acoes .descri:nth-child(1) .titulo2{
     text-align: right;
+}.acoes .descri:nth-child(2) .titulo2{
+    text-align: start;
+
 }
 .descri .titulo2{
     justify-content: center;
@@ -1027,6 +1062,10 @@ font-size: 20px;
 .acoes .people{
     width: 50%;
     height: auto;
+}
+.acoes .people img{
+    width: 100%;
+    height: 100%;
 }
 .acoes .planilha{
     width: 50%;
@@ -1048,7 +1087,7 @@ font-size: 20px;
     flex-direction: column;
 }
 
-.descri .opcoes div li{
+.descri .opcoes li{
     justify-content: flex-end;
     display: flex;
     font-size: 20px;
@@ -1066,7 +1105,7 @@ font-size: 20px;
     color: transparent;
     display: none;
 }
-.descri .opcoes div li::before{
+.descri .opcoes li::before{
     margin-bottom: 10px;
     font-family: 'FontAwesome'; /* ou outra fonte de ícones */
     content: '\f00c'; /* Código do ícone */
@@ -2000,7 +2039,7 @@ font-size: 20px;
     .planos .container .plano, #planos_premium{
         width: 28%;
     }
-    .descri .opcoes div li{
+    .descri .opcoes li{
         font-size: 16px;
     }
     #slider ul li{
@@ -2324,9 +2363,12 @@ font-size: 20px;
         margin-top: 50px;
         width: 80%;
         height: 20%;
-    }.descri .opcoes{
+    }.descri .opcoes,.descri .opcoes2{
         align-items: center;
         flex-direction: column;
+    }
+    .descri .opcoes2 li{
+        width: 100%;
     }
     .solucoes{
         min-height: auto;
@@ -2334,7 +2376,7 @@ font-size: 20px;
     .cta_inicial .descri p:nth-child(2){
         font-size: 17px;
     }
-    .acoes .descri .titulo2{
+    .acoes .descri:nth-child(1) .titulo2,.acoes .descri:nth-child(2) .titulo2{
         width: 100%;
         text-align: center;
         padding: 20px 0px;
@@ -2371,14 +2413,17 @@ font-size: 20px;
     .descri .opcoes div p{
         text-align: center;
     }
-    .descri .opcoes div li{
+    .descri .opcoes li{
         margin: 10px 0px;
         justify-content: center;
     }
     .acoes .descri:nth-child(1){
         align-items: center;
     }
-    .descri .opcoes div li::before{
+    .acoes .descri:nth-child(2){
+        align-items: center;
+    }
+    .descri .opcoes li::before{
         margin-right: 10px;
     }
     .acoes .descri .text{
