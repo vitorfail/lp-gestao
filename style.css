@@ -648,11 +648,16 @@ header .titulo .error{
     background: var(--cor-thema);
 }
 .container_comentarios{
-    min-height: 900px;
     width: 100%;
+    animation: scroll 30s linear infinite;
     display: flex;
     justify-content: center;
     padding-top: 20px;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 5))
+    }
 }
 .container_comentarios::-webkit-scrollbar {
     display: none; /* Esconde a barra de rolagem */
@@ -670,51 +675,7 @@ header .titulo .error{
     align-items: center;
     justify-content: space-between;
     min-height: auto;
-}
-.coluna-comentario{
-    margin:0px 4px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 24.5%;
-}
-.coluna-comentario:nth-child(1) .comentario:nth-child(1){
-    height: 30%;
-}
-.coluna-comentario:nth-child(1) .comentario:nth-child(2){
-    height: 45%;
-}
-.coluna-comentario:nth-child(1) .comentario:nth-child(3){
-    height: 25%;
-}
-.coluna-comentario:nth-child(2) .comentario:nth-child(1){
-    height: 32%;
-}
-.coluna-comentario:nth-child(2) .comentario:nth-child(2){
-    height: 28%;
-}
-.coluna-comentario:nth-child(2) .comentario:nth-child(3){
-    height: 40%;
-}
-.coluna-comentario:nth-child(3) .comentario:nth-child(1){
-    height: 30%;
-}
-.coluna-comentario:nth-child(3) .comentario:nth-child(2){
-    height: 45%;
-}
-.coluna-comentario:nth-child(3) .comentario:nth-child(3){
-    height: 25%;
-}
-.coluna-comentario:nth-child(4) .comentario:nth-child(1){
-    height: 38%;
-}
-.coluna-comentario:nth-child(4) .comentario:nth-child(2){
-    height: 30%;
-}
-.coluna-comentario:nth-child(4) .comentario:nth-child(3){
-    height: 32%;
+    overflow-x: hidden;
 }
 .comentario{
     margin: 3px;
@@ -723,7 +684,7 @@ header .titulo .error{
     justify-content: center;
     padding: 1rem;
     flex-shrink: 0;
-    width: 100%;
+    width: 400px;
     background: #EDEAE3;
     color: var(--cor-destaque);
     border-radius: 10px;
@@ -2221,12 +2182,10 @@ font-size: 19px;
 }
 @media screen and (max-width:750px) {
     .container_comentarios{
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
     }
     .comentario {
-        margin: 10px 0px;
+        margin: 10px 10px;
         height: auto;
         width: 80vw;
     }
