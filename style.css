@@ -620,12 +620,14 @@ header .titulo .error{
     padding: 5px 30px;
     font-size: 18px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
     width: auto;
+    height: 45px;
     background: var(--cor-thema);
     box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.124);
     color: white;
-    border-radius: 5px;
-}
+    border-radius: 5px;}
  .titulo2{
     font-size: 42px;
     font-weight: 600;
@@ -684,6 +686,9 @@ header .titulo .error{
     min-height: auto;
     overflow-x: hidden;
     min-height: fit-content;}
+
+.comentarios::before{
+}
 .comentario{
     margin: 3px;
     display: flex;
@@ -793,11 +798,14 @@ font-size: 19px;
 .prova .titulo2{
     line-height: 1.2;
     padding-top: 50px;
-    padding-bottom: 10px;
     width: 100%;
     text-align: center;
     font-weight: 600;
     color: white;
+}
+.prova .titulo2+p{
+    text-align: center;
+    width: 70%;
 }
 .solucoes .info{
     width: 70%;
@@ -2032,7 +2040,7 @@ font-size: 19px;
     }
 
 }
-@media screen and (min-width: 1600px){
+@media screen and (min-width: 1650px){
     .cta_inicial .descri p:nth-child(1){
         font-size: 1.8vw;
     }
@@ -2075,8 +2083,16 @@ font-size: 19px;
     #slider ul li div{
         height: 100%;
     }
+    .prova .titulo2+p{
+        text-align: center;
+        width: 90%;
+    }
 }
 @media screen and (max-width:942px) {
+    .prova .titulo2+p{
+        text-align: justify;
+        width: 100%;
+    }
     .solucoes .info .ask{
         width: 100%;
     }
