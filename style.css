@@ -367,7 +367,9 @@ header .titulo .error{
     align-items: center;
     padding: 5px 16px;
     justify-content: center;
-    background: var(--cor-thema);
+    background: linear-gradient(56deg, var(--cor-thema), var(--cor-thema), #98ff68, var(--cor-thema), var(--cor-thema));
+    background-size: 400%;
+    animation: changeGradientAnimation 18s ease-in-out infinite;
     border-radius: 6px;
     color: white;
     outline: none;
@@ -394,6 +396,10 @@ header .titulo .error{
 }
 .cta_garantias.loja{
     color: var(--cor-thema);
+    background: white;
+    /*background: linear-gradient(56deg, white, white, #d0ff00, white, white);
+    background-size: 400%;
+    animation: changeGradientAnimation 18s ease-in-out infinite;*/
 }
 
 .cta_garantias i{
@@ -509,7 +515,7 @@ header .titulo .error{
     width: 100%;
     cursor: pointer;
     padding: 10px 16px;
-    background: linear-gradient(90deg, var(--cor-thema), var(--cor-thema), #98ff68, var(--cor-thema), var(--cor-thema));
+    background: linear-gradient(56deg, var(--cor-thema), var(--cor-thema), #98ff68, var(--cor-thema), var(--cor-thema));
     background-size: 400%;
     animation: changeGradientAnimation 18s ease-in-out infinite;
     border-radius: 30px;
