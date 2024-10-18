@@ -1,19 +1,16 @@
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
     if (window.location.hash) {
         history.replaceState(null, null, ' ');
     }
-    detectarScroll("esquerda");
-    detectarScroll("direita");
-    detectarScroll("cima");
-    detectarScroll("baixo");
-    detectarScroll("solucao-letra");
-    detectarScroll("listra");
-    detectarScroll("money");
-    detectarScroll("pergunta");
-    detectarScroll("cifrao");
-    detectarScroll("numero1");
-    detectarScroll("numero2");
-    detectarScroll("numero3");
+    console.log("teste1");
+});
+
+const direcoes = ["esquerda", "direita", "cima", "baixo", "solucao-letra", "listra", "money", "pergunta", "cifrao", "numero1", "numero2", "numero3"];
+
+direcoes.forEach(function(direcao) {
+    window.addEventListener('DOMContentLoaded', function() {
+        detectarScroll(direcao);
+    });
 });
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; // Posição do scroll
