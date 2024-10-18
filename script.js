@@ -2,6 +2,18 @@ window.addEventListener('load', function() {
     if (window.location.hash) {
         history.replaceState(null, null, ' ');
     }
+    detectarScroll("esquerda");
+    detectarScroll("direita");
+    detectarScroll("cima");
+    detectarScroll("baixo");
+    detectarScroll("solucao-letra");
+    detectarScroll("listra");
+    detectarScroll("money");
+    detectarScroll("pergunta");
+    detectarScroll("cifrao");
+    detectarScroll("numero1");
+    detectarScroll("numero2");
+    detectarScroll("numero3");
 });
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; // Posição do scroll
@@ -82,22 +94,6 @@ function detectarScroll(el) {
     }
 }
 
-
-window.addEventListener("load",function() {
-    setTimeout(function() {
-        detectarScroll("esquerda");
-        detectarScroll("direita");
-        detectarScroll("cima");
-        detectarScroll("baixo");
-        detectarScroll("solucao-letra");
-        detectarScroll("listra");
-        detectarScroll("money");
-        detectarScroll("pergunta");
-        detectarScroll("cifrao");
-        detectarScroll("numero1");
-        detectarScroll("numero2");
-        detectarScroll("numero3");
-    }, 100);});
 window.addEventListener("scroll",function() {
     detectarScroll("listra")
     detectarScroll("solucao-letra")
