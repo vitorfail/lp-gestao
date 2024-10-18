@@ -1,5 +1,5 @@
 :root{
-    --delay:0.7s;
+    --delay:0.5s;
     --cor-base:#5b5675;
     --cor-destaque:#141125;
     --cor-thema:#27ae60;
@@ -453,17 +453,14 @@ header .titulo .error{
     display: block;
     opacity: 0;
     font-weight: 600;
-    animation: baixo var(--delay) linear 0.3s forwards;
 }
 .cta_inicial .descri p:nth-child(2){
     color: var(--cor-base);
     font-size: 18px;
     opacity: 0;
-    animation: baixo var(--delay) linear 0.9s forwards;
 }
 .cta_inicial .img{
     opacity: 0;
-    animation: esquerda var(--delay) linear 0s forwards;
     height: 45%;
     width: 50%;
 }
@@ -497,7 +494,6 @@ header .titulo .error{
     height: 80px;
     border-radius: 10px;
     opacity: 0;
-    animation: subir var(--delay) linear 0.3s forwards;
 }
 .cta_inicial .descri .button p{
     font-size: 15px;
